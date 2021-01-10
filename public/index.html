@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title></title>
+    <title>Link Scrubber</title>
     <link href="build/main.css" rel="stylesheet">
 
 </head>
@@ -12,15 +12,20 @@
 <body>
     <div class="container">
         <div class="bg-light p-4">
-            <h1 class="display-4">Hello, world!</h1>
-            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention
-                to
-                featured content or information.</p>
+            <h1 class="display-4">Link Scrubber</h1>
+            <p class="lead">This is an application designed to strip out query strings from url addressess</p>
             <hr class="my-4">
-            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-            <p class="lead">
-                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-            </p>
+            <div class="row">
+                <div class="col-12">
+                    <input type="text" class="form-control" id="urlScrubInput" placeholder="Scrub-a-dub-dub!">
+                </div>
+            </div>
+            <button onclick="scrub()" class="btn btn-primary mt-3" type="button">Scrub</button>
+            <div class="mt-4">
+                <a target="_blank" class="scrubbedURL" id="scrubbedURL"></a>
+                <button onclick="displaySuccess('Copied!')" title="Copy to Clipboard" type="button" class="btn d-none"
+                    id="copyClipboardButton" data-clipboard-target="#scrubbedURL"><i class="fas fa-paste"></i></button>
+            </div>
         </div>
     </div>
     <script src="build/main.js"></script>

@@ -1,1 +1,7 @@
 @import "~bootstrap/scss/bootstrap";
+@import "~noty/lib/noty";
+@import "~noty/lib/themes/bootstrap-v4";
+
+.scrubbedURL::selection {
+    background:ghostwhite;
+}
